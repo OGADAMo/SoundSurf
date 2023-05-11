@@ -1,0 +1,17 @@
+#device-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  #device-list li {
+    margin-bottom: 10px;
+  }
+  #log-container {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  #log-container div {
+    font-family: monospace;
+    padding: 5px;
+    border-bottom: 0px solid #ccc;
+  }
+  
