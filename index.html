@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/index.css">
+    <title>SoundSurf</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/img/Hotpot.png" alt="" width="150px" height="150px">
+    </div>
+
+    <h1>SoundSurf</h1>
+    <h2>Music & Equalizer Player</h2>
+
+    <div class="marin-wrapper">
+        <form id="loginForm">
+            <h3>Login</h3>
+
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" id="login_email" placeholder="niko.nikolic@gmail.com">
+            </div>
+
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" id="login_lozinka" placeholder="*******">
+            </div>
+            
+            <div><button>Sign-in</button><button class="registration">Sign-up</button></div>
+            
+            <div>
+                
+            
+                
+            </div>
+        </form>
+
+
+        
+    </div>
+
+
+
+    <div class="modal">
+        <button id="closeModal">x</button>
+
+        <form id="registrationForm">
+            <h2>Registration</h2>
+
+            <div>
+                <label for="korisnicko_ime">Nickname:</label>
+                <input type="text" name="korisnicko_ime" id="korisnicko_ime" placeholder="niko.nikolic1">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="register_email" id="email" placeholder="niko.nikolic@gmail.com">
+            </div>
+
+            <div>
+                <label for="lozinka">Password:</label>
+                <input type="password" name="register_lozinka" id="lozinka" placeholder="*****">
+            </div>
+
+            <div>
+                <label for="ponovi_lozinka">Re-type password:</label>
+                <input type="password" name="ponovi_lozinka" id="ponovi_lozinku" placeholder="******">
+            </div>
+            
+            <div><button>Sign-up</button></div>
+        </form>
+    </div>
+
+    <script src="js/Object/Validator.js"></script>
+    <script src="js/Object/Session.js"></script>
+    <script src="js/Object/User.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
