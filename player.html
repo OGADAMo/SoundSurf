@@ -4,20 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@6.6"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap&subset=latin-ext" rel="stylesheet"/>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>                                                       
-    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>                                 
+<link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />                                
+<script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+
     <link rel="stylesheet" href="style/player.css" />
     <link rel="stylesheet" href="style/equalizer.css" />
-
-    <link rel="stylesheet" href="style/bluetooth.css" />
    
     <meta http-equiv="Content-Type" content="application/javascript">
    
-
-
     <title>SoundSurf</title>
 </head>
 <body>
@@ -84,10 +83,11 @@
             <div class="pressets">
                 <button>Flat</button>
                 <button>Acoustic</button>
-                <button>Electronic</button>
-                <button>Piano</button>
-                <button>Pop</button>
+                <button>Heavy Metal</button>
+                <button>Car</button>
+                <button>Gaming</button>
                 <button>Rock</button>
+                <button>Folk</button>
             </div>
  
             <div id="equalizer">
@@ -117,7 +117,7 @@
                 </div>
             </div>
 
-            <label>a</label>
+            
             <div class="ss">
                 <div class="volumes">
                     <div id="volume-slider"></div>
@@ -140,48 +140,139 @@
     
     <div class="modal">
         <button id="closeModal">x</button>
+
         <div class="settings">
-            <form id="settings">
-                <h2>Settings</h2>
+            <h2>Settings</h2>
+            <div class="theme">
+                <img src="assets/img/icons/color-palette.png">
+                <label>Change theme</label>
+                <img class="right-align" src="assets/img/icons/settings-arrow.png" height="25px" width="25px">
+      
+            </div>
 
-                <div>
-                    <label for="background">Change theme</label>
-                    <input type="color" name="background" id="background" >
-                </div>
+            <div class="account">
+                <img src="assets/img/icons/avatar.png">
+                <label>Account</label>
+                <img class="right-align" src="assets/img/icons/settings-arrow.png" height="25px" width="25px">
+            </div>
 
-                <div>
-                    <label for="background">Change name</label>
-                    <input type="text" name="background" id="background">
-                </div>
+            <div class="addsong">
+                <img src="assets/img/icons/addSong.png">
+                <label>Add Song</label>
+                <img class="right-align" src="assets/img/icons/settings-arrow.png" height="25px" width="25px">
+            </div>
 
-                <div>
-                    <label>Bluetooth</label>
-                    <button id="bluetooth_button">Turn ON</button>
-                </div>
+            <div class="dark-mode">
+                <input type="checkbox" id="toggle_checkbox">
 
-                <div>
-                    <button id="delete">Delete account</button>
-                    
-                </div>
+                <label for="toggle_checkbox">
+                    <div id="star">
+                        <div class="star" id="star-1">★</div>
+                        <div class="star" id="star-2">★</div>
+                    </div>
+                    <div id="moon"></div>
+                </label>
+            </div>
+              
 
-
-
-            </form>
             <div>
-                <button id="sign-out">Sign out</button>
+                <button id="sign-out"><img src="assets/img/icons/download.png">Sign out</button>  
+                <button id="delete"><img src="assets/img/icons/delete.png">Delete account</button>   
+            </div>
+
+
+
+        </div>
+        
+        <div class="subsettings">
+            <div style="display: none;" class="theme">
+                <img class="right-align sub" src="assets/img/icons/settings-arrow.png" height="25px" width="25px">
+                <h2>Change Theme</h2>
+
+                <div>
+                    <label>Change Background </label>
+                    <input type="color" id="change-bg">
+                </div>
+
+                <div>
+                    <label>Change Player Card </label>
+                    <input type="color" id="change-card">
+                </div>
+
+                <div>
+                    <label>Change Text Color</label>
+                    <input type="color" id="change-text">
+                </div>
+
+                <div>
+                    <button class="reset-color">Set Default</button>
+                    <button class="save-color">Save Colors</button>
+                </div>
+                
+            </div>
+
+            <div style="display: none;" class="account">
+                <img class="right-align sub" src="assets/img/icons/settings-arrow.png" height="25px" width="25px">
+                <h2>Account</h2>
+
+                <div>
+                    <label for="ime">Ime:</label>
+                    <input type="text" id="ime" value="John Doe">
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="johndoe@example.com">
+                </div>
+                
+                <div>
+                    <label for="lozinka">Lozinka:</label>
+                    <input type="password" id="lozinka" value="********">
+                </div>
+                
+                <div>
+                    <label for="nova-lozinka">Nova lozinka:</label>
+                    <input type="password" id="nova-lozinka" placeholder="Unesite novu lozinku">
+                </div>
+                
+                <div>
+                    <button>Spremi promjene</button>
+                </div>
+                
+            </div>
+
+            <div style="display: none;" class="addsong">
+                <img class="right-align sub" src="assets/img/icons/settings-arrow.png" height="25px" width="25px">
+                <h2>Add new Song</h2>
+
+                <div class="input-field">
+                    <label for="name">Naziv:</label>
+                    <input type="text" id="name" placeholder="Unesite naziv pjesme">
+                  </div>
+                
+                  <div class="input-field">
+                    <label for="artist">Izvođač:</label>
+                    <input type="text" id="artist" placeholder="Unesite ime izvođača">
+                  </div>
+                
+                  <div class="input-field">
+                    <label for="cover">Omota albuma (URL):</label>
+                    <input type="text" id="cover" placeholder="Unesite URL omota albuma">
+                  </div>
+                
+                  <div class="input-field">
+                    <label for="source">Izvor pjesme (URL):</label>
+                    <input type="text" id="source" placeholder="Unesite URL izvora pjesme">
+                  </div>
+                
+                  <div class="input-field">
+                    <button id="dodaj">Dodaj pjesmu</button>
+                  </div>
+                
             </div>
         </div>
-
-
-
-
-        
     </div>
- 
- 
-    
-
-    <div id="messageDiv">        
+       
     <svg xmlns="http://www.w3.org/2000/svg" hidden link="http://www.w3.org/1999/xlink">
         <defs>
             <symbol id="icon-heart-o" viewBox="0 0 32 32">
@@ -234,7 +325,7 @@
     <script src="js/Object/Equalizer.js"></script>
     <script src="js/Object/Session.js"></script>
  
-    <script src="js/data/track_info.js"></script>
+    
  
     <script src="js/data/pressets.js"></script>
     <script src="js/Object/Player.js"></script>
