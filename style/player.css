@@ -1,12 +1,12 @@
 body {
-    background: #dfe7ef;
-    font-family: "Bitter", serif;
-  }
-  
+  background: #dfe7ef;
+  font-family: "Bitter", serif;
+}
+
 * {
   box-sizing: border-box;
 }
-  
+
 .icon {
     display: inline-block;
     width: 1em;
@@ -15,7 +15,7 @@ body {
     stroke: currentColor;
     fill: currentColor;
 }
-  
+
 .wrapper {
     width: 100%;
     display: flex;
@@ -30,9 +30,9 @@ body {
     .wrapper {
         flex-wrap: wrap;
         flex-direction: column;
-    }
+    } 
 }
-  
+
 .player {
     background: #eef3f7;
     width: 410px;
@@ -40,7 +40,7 @@ body {
     box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
     border-radius: 15px;
     padding: 30px;
-  }
+}
 
 @media screen and (max-width: 576px), (max-height: 500px) {
     .player {
@@ -124,10 +124,9 @@ body {
     box-shadow: 0px 10px 40px 0px rgba(76, 70, 124, 0.5);
     display: block;
     z-index: 2;
-    position: absolute;
-    border-radius: 15px;
-}
+    position: absolute
 
+}
 .player-cover-img {
     width: 100%;
     height: 100%;
@@ -139,11 +138,11 @@ body {
 }
 
 .player-controls {
-    flex: 1;
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 20px;
+    flex: 1;
 }
 
 @media screen and (max-width: 576px), (max-height: 500px) {
@@ -157,15 +156,15 @@ body {
 
 .player-controls-item {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 30px;
+    width: 50px;
+    height: 50px;
     padding: 5px;
     margin-bottom: 10px;
     color: #acb8cc;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
     position: relative;
     transition: all 0.3s ease-in-out;
 }
@@ -190,10 +189,9 @@ body {
     height: 100%;
     border-radius: 50%;
     background: #fff;
-    transform: scale(0.5);
     opacity: 0;
+    transform: scale(0.5);
     box-shadow: 0px 5px 10px 0px rgba(76, 70, 124, 0.2);
-    transition: all 0.3s ease-in-out;
     transition: all 0.4s cubic-bezier(0.35, 0.57, 0.13, 0.88);
 }
 
@@ -201,6 +199,7 @@ body {
     .player-controls-item:hover {
         color: #532ab9;
     }
+    
     .player-controls-item:hover::before {
         opacity: 1;
         transform: scale(1.3);
@@ -211,6 +210,7 @@ body {
     .player-controls-item:active {
         color: #532ab9;
     }
+    
     .player-controls-item:active::before {
         opacity: 1;
         transform: scale(1.3);
@@ -223,109 +223,106 @@ body {
 }
 
 .player-controls-item.-xl {
-    margin-bottom: 0;
+    display: inline-flex;
     font-size: 95px;
-    filter: drop-shadow(0 11px 6px rgba(172, 184, 204, 0.45));
-    color: #fff;
     width: auto;
     height: auto;
-    display: inline-flex;
+    margin-bottom: 0;
+    color: #fff;
+    filter: drop-shadow(0 11px 6px rgba(172, 184, 204, 0.45));
 }
 
 @media screen and (max-width: 576px), (max-height: 500px) {
     .player-controls-item.-xl {
-        margin-left: auto;
         font-size: 75px;
+        margin-left: auto;
         margin-right: 0;
     }
 }
-  
+
 .player-controls-item.-xl:before {
     display: none;
 }
-  /* TODO*/
+
 .player-controls-item.-favorite.active {
     color: red;
 }
+
   
 .progress {
     width: 100%;
     margin-top: -15px;
     user-select: none;
-  
 }
-  
+
 .progress-top {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
-  
+    align-items: flex-end;
 }
-  
+
 .progress-duration {
-    color: #71829e;
-    font-weight: 700;
     font-size: 20px;
+    font-weight: 700;
+    color: #71829e;
     opacity: 0.5;
-  
 }
 
 .progress-time {
     margin-top: 50px;
-    color: #71829e;
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
+    color: #71829e;
     opacity: 0.7;
-  }
+}
 
 .progress-bar {
-    height: 6px;
     width: 100%;
-    cursor: pointer;
+    height: 6px;
+    border-radius: 10px;
     background-color: #d0d8e6;
+    cursor: pointer;
     display: inline-block;
-    border-radius: 10px;
-  
 }
-   
+
 .progress-current {
-    height: inherit;
     width: 0%;
-    color: #a3b3ce;
-    border-radius: 10px;
+    height: inherit;
     padding-top: 10px;
-  }
-  
+    border-radius: 10px;
+    color: #a3b3ce;
+}
+
 .album-info {
-    color: #71829e;
     flex: 1;
     padding-right: 60px;
+    color: #71829e;
     user-select: none;
 }
-  
+
 @media screen and (max-width: 576px), (max-height: 500px) {
     .album-info {
         padding-right: 30px;
     }
 }
-  
+
 .album-info-name {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
     line-height: 1.3em;
 }
-  
+
 @media screen and (max-width: 576px), (max-height: 500px) {
     .album-info-name {
         font-size: 18px;
         margin-bottom: 9px;
     }
 }
-  
+
 .album-info-track {
-    font-weight: 400;
     font-size: 20px;
+    font-weight: 400;
     opacity: 0.7;
     line-height: 1.3em;
     min-height: 52px;
@@ -337,6 +334,7 @@ body {
         min-height: 50px;
     }
 }
+
   
 .modal {
     display: none;
@@ -353,6 +351,9 @@ body {
 }
 
 .modal button#closeModal {
+    position: absolute;
+    top: 0;
+    right: 5%;
     height: 20px;
     width: 20px;
     color: white;
@@ -360,14 +361,256 @@ body {
     border: 0;
     font-size: 25px;
     font-weight: bold;
-    position: absolute;
-    right: 5%;
-    top: 0;
 }
 
 .modal .bluetooth {
     display: none;
+    z-index: 99;
+}
+
+.settings div {
+    display: flex;
+    align-items: center;
+}
+
+.settings img {
+    margin-right: 5px;
+    width: 25px;
+}
+
+.settings label {
+    margin-right: 50px;
+    font-size: 18px;
+}
+
+.settings img.right-align {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 3px;
+}
+
+#toggle_checkbox {
+    display: none;
+}
+
+.dark-mode label {
+    display: block;
+    width: 72px; /* Smanjena širina */
+    height: 34px; /* Smanjena visina */
+    margin: 40px auto 0px auto;
+    background-color: #77b5fe;
+    border-radius: 26px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s ease background-color;
+    overflow: hidden;
+}
+
+.dark-theme {
+    background-color: #444444;
+    color: #dfe7ef;
+    filter: drop-shadow(0 11px 6px rgba(45, 57, 79, 0.45));
+}
+
+.player-dark-theme {
+    background-color: #736f6f;
+    color: whitesmoke;
+}
+
+#star {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    background-color: #fafd0f;
+    transform: scale(1);
+    border-radius: 50%;
+    transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+    z-index: 1;
+}
+
+#star-1 {
+    position: relative;
+}
+
+#star-2 {
+    position: absolute;
+    transform: rotateZ(36deg);
+}
+
+.star {
+    top: 0;
+    left: -3.2px;
+    font-size: 25px;
+    line-height: 14px;
+    color: #fafd0f;
+    transition: 0.3s ease color;
+}
+
+#moon {
+    position: absolute;
+    bottom: -26px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s ease bottom;
+}
+
+#moon:before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -9px;
+    width: 20px;
+    height: 20px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease background-color;
+}
+
+#toggle_checkbox:checked + label {
+    background-color: #000;
+}
+
+#toggle_checkbox:checked + label #star {
+    top: 2px;
+    left: 40px;
+    transform: scale(0.5);
+    background-color: yellow;
+}
+
+#toggle_checkbox:checked + label .star {
+    color: yellow;
+}
+
+#toggle_checkbox:checked + label #moon {
+    bottom: 4px;
+}
+
+#toggle_checkbox:checked + label #moon:before {
+    background-color: #000;
+}
+
+.settings div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings div:last-child button,
+.account button {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: transform 0.35s ease;
+}
+
+.settings div:last-child button:hover,
+.account button:hover {
+    transform: scale(1.1);
+}
+
+#delete {
+    background-color: rgba(189, 18, 18, 0.761);
+    color: rgb(209, 208, 208);
+}
+
+#sign-out {
+    border: 1px solid #c7cacc;
+}
+
+.settings div:last-child button img {
+    margin-right: 5px;
+}
+
+.rs-control .rs-range-color {
+    background-color: #82a3c3;
+}
+
+.rs-control .rs-path-color {
+    background-color: #538dc6;
+}
+
+.rs-control .rs-handle {
+    background-color: #a7a7a7;
+}
+
+.rs-control .rs-bg-color {
+    background-color: rgb(133, 57, 57);
+}
+
+.theme {
+    display: none;
+}
+
+.account h2 {
+    margin: 10px 0px;
+    font-size: 24px;
+}
+
+.account label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.account input[type="text"],
+.account input[type="email"],
+.account input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.addsong {
+    display: none;
+}
+
+.addsong h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.addsong .input-field {
+    margin-bottom: 15px;
+}
+
+.addsong label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.addsong input[type="text"],
+.addsong input[type="url"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.addsong button {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 
 
+  
+
+
+  
+
+  

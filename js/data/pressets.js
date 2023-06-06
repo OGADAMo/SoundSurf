@@ -1,4 +1,3 @@
-
 const presets = [
     {
         name: "Flat",
@@ -17,56 +16,67 @@ const presets = [
         name: "Acoustic",
         values: 
         {
-            band0: 5,
-            band1: -5,
+            band0: 3,
+            band1: 1,
             band2: 0,
-            band3: 5,
-            band4: 10
+            band3: -1,
+            band4: -3
         }
     },
     {
-        name: "Electronic",
+        name: "Heavy Metal",
         values: 
         {
-            band0: 2,
-            band1: 5,
-            band2: 5,
-            band3: 2,
-            band4: -12
+            band0: 11,
+            band1: 6,
+            band2: -4,
+            band3: 0,
+            band4: 12
         }
     },
     {
-        name: "Piano",
+        name: "Car",
         values: 
             {
-                band0: -12,
-                band1: -5,
-                band2: 12,
-                band3: 2,
-                band4: -1
+                band0: 3,
+                band1: 5,
+                band2: 0,
+                band3: -2,
+                band4: -4
             }    
         
     },
     {
-        name: "Pop",
+        name: "Gaming",
         values:
         {
-            band0: 5,
-            band1: 12,
+            band0: 7,
+            band1: 3,
             band2: 0,
-            band3: -12,
-            band4: 10
+            band3: 8,
+            band4: 12
         }
     },
     {
         name: "Rock",
         values: 
         {
-            band0: -12,
-            band1: -5,
-            band2: 6,
+            band0: 0,
+            band1: 4,
+            band2: 0,
             band3: 6,
-            band4: 4
+            band4: 3
+        }
+    },
+    {
+        name: "Folk",
+        values: 
+        {
+            band0: 6,
+            band1: 3,
+            band2: 0,
+            band3: -3,
+            band4: -6
         }
     },
 ];

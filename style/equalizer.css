@@ -1,7 +1,3 @@
-#eq {
-    background-color: #eef3f7;
-}
-
 #equalizer div {
     width: 20%;
     display: flex;
@@ -9,42 +5,62 @@
     flex-direction: column;
     align-items: center;
     float: left;
-}
-#equalizer input[type=range]::-webkit-slider-thumb {
+  }
+  
+  #equalizer input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: red;
   }
-#equalizer input[type="range"] {
+  
+  #equalizer input[type="range"] {
     -webkit-appearance: slider-vertical;
     width: 100%;
     height: 100%;
-    
-}
-
-button {
+  }
+  
+  button {
     margin-top: 20px;
     color: #71829e;
     background-color: #eef3f7;
     border: none;
     cursor: pointer;
     font-size: 14px;
-
-}
-
-label {
+  }
+  
+  label {
     color: #71829e;
-}
-
-.ss {
+  }
+  
+  .ss {
     display: flex;
+    margin-top: 200px;
     justify-content: space-around;
-}
-
-.ss div label{
+  }
+  
+  .ss div label {
     justify-content: center;
-} 
-
-
+  }
+  
+  .subsettings .right-align {
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+  
+  .rs-control .rs-range-color {
+    background-color: #dfe7ef;
+  }
+  
+  .rs-control .rs-path-color {
+    background-color: #ffffff;
+  }
+  
+  .rs-control .rs-handle {
+    background-color: #dfe7ef;
+  }
+  
+  .rs-control .rs-bg-color {
+    background-color: #eef3f7;
+  }
+  

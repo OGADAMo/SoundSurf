@@ -2,96 +2,73 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-body {
+  }
+  
+  body {
     font-family: sans-serif;
-    margin: 10% 25% 100% 25%;
-    padding: 0 50px;
+    margin: 5% 25% 0% 25%;
+    padding: 0% 10% 0% 10%;
     background: #dfe7ef;
     background-size: cover;
     box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
-    height: 65vh;
-}
-
-h1 {
+    height: 75vh;
+  }
+  
+  h1 {
     text-align: center;
-}
-h2 {
+  }
+  
+  h2 {
     text-align: center;
     font-size: 16px;
-    margin-bottom: 50px;
-}
-
-
-.logo {
+    margin-bottom: 25px;
+  }
+  
+  .logo {
     text-align: center;
-    margin-bottom: 10px ;
-}
-
-.main-wrapper {
+  }
+  
+  .main-wrapper {
     margin: auto;
     box-shadow: 0px 10px 40px 0px rgba(76, 70, 124, 0.5);
-    
-    
-}
-
-form div {
-    padding: 15px 0;
-    
-}
-
-form div label {
+  }
+  
+  form div {
+    padding: 5px 0;
+  }
+  
+  form div label {
     display: block;
     font-weight: bold;
     font-size: 16px;
- 
-
-}
-
-form ul {
+  }
+  
+  form ul {
     list-style: none;
-}
-
-form ul li {
+  }
+  
+  form ul li,
+  .error {
     color: red;
-}
-
-form div input {
-    height: 50px;
+  }
+  
+  form div input {
+    height: 35px;
     width: 100%;
     font-size: 16px;
     padding: 0 10px;
-}
-
-form div button {
+  }
+  
+  form div button {
     float: left;
-    cursor: pointer;
-    padding: 10px 25px;
-    font-size: 16px;
-    border: 0;
-    
-}
-
-.no-acc {
-    float: left;
-    text-align: center;
-   
-
-}
-
-.registration {
+  }
+  
+  .registration {
     margin-left: 15px;
-}
-
-.no-acc p {
-    font-size: 22px;
-    
-}
-
-.modal {
-    display:none;
+  }
+  
+  .modal {
+    display: none;
     background: #eef3f7;
     box-shadow: rgba(50, 88, 130, 0.32) 0 0 1000px 1000px;
     max-width: 50%;
@@ -102,15 +79,18 @@ form div button {
     left: 0;
     right: 0;
     width: 100%;
-}
-
-button {
+  }
+  
+  form button {
     cursor: pointer;
-}
-
-.modal button#closeModal {
-    height: 20px;
-    width: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background: #eef3f7;
+    border: 1px solid #202020; /* Crni obrub */
+    box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+  }
+  
+  .modal button#closeModal {
     color: black;
     background-color: transparent;
     border: 0;
@@ -119,5 +99,5 @@ button {
     position: absolute;
     right: 30px;
     top: 30px;
-}
-
+  }
+  
