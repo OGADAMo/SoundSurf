@@ -1,7 +1,7 @@
 # SoundSurf
 # Music Player and Equalizer Web Application
 
-![Music Player and Equalizer](assets/img/Hotpot.png)
+![Music Player and Equalizer](assets/img/logo.png)
 
 This is a web application that serves as a music player with an integrated equalizer. It allows users to play their favorite songs while customizing the audio output using the built-in equalizer. The application provides a seamless and immersive music listening experience.
 
