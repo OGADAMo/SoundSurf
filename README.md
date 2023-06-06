@@ -1,5 +1,5 @@
 # SoundSurf
-# Music Player and Equalizer Web Application
+
 
 ![Music Player and Equalizer](path_to_image)
 
